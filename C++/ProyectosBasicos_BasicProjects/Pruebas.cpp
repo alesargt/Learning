@@ -4,7 +4,7 @@
 using namespace std; // Para no escribir std:: al inicio.
 
 int main(){
-    cout << "Hola a todos desde c++" << endl;
+    /*cout << "Hola a todos desde c++" << endl;
 
     int x = 5; 
     cout << "x: " << x << endl; 
@@ -37,7 +37,17 @@ int main(){
 
     } while(password != "prueba123");
 
-    cout << "Bienvenido" << endl;
+    cout << "Bienvenido" << endl;*/
+
+    /*int telefono;
+    string direccion;
+
+    cout << "Ingrese su numero de telefono: ";
+    cin >> telefono;
+    cin.ignore();
+
+    cout << "Ingrese su direccion: ";
+    getline (cin, direccion);*/
 
     return 0; // Indica que todo terminó sin errores
 }
