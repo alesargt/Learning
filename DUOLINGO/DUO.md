@@ -16,3 +16,27 @@ Este es mi inicio en dulingo, inicio en experiencia cero, ya que desde cero quie
 ## DIA 3 | DAY 3
 ![AvancesInicialesTres](/DUOLINGO/img/semana1_week1/7.png)
 ![PerfilAvancesInicialesTres](/DUOLINGO/img/semana1_week1/8.png)
+
+---
+
+## DIA 4 | DAY 4
+![AvancesInicialesCuatro](/DUOLINGO/img/semana1_week1/9.png)
+![PerfilAvancesInicialesCuatro](/DUOLINGO/img/semana1_week1/10.png)
+
+---
+
+## DIA 5 | DAY 5
+![AvancesInicialesCinco](/DUOLINGO/img/semana1_week1/11.png)
+![PerfilAvancesInicialesCinco](/DUOLINGO/img/semana1_week1/12.png)
+
+---
+
+## DIA 6 | DAY 6
+![AvancesInicialesSeis](/DUOLINGO/img/semana1_week1/13.png)
+![PerfilAvancesInicialesSeis](/DUOLINGO/img/semana1_week1/14.png)
+
+## DIA 7 | DAY 7
+![AvancesInicialesSiete](/DUOLINGO/img/semana1_week1/15.png)
+![PerfilAvancesInicialesSiete](/DUOLINGO/img/semana1_week1/16.png)
+![AvancesIntermediosSiete](/DUOLINGO/img/semana1_week1/17.png)
+![PerfilAvancesIntermediosSiete](/DUOLINGO/img/semana1_week1/18.png)
