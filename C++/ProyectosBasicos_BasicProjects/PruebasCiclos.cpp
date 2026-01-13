@@ -24,5 +24,36 @@ int main(){
         base2 = sum;
     }
     */
+
+    /*
+    // Serie de Fibonacci con ciclo do while y consola
+    int base1 = 0;
+    int base2 = 1;
+    int sum = 0;
+    int iterations = 0;
+    int iterationsSelect = 0;
+
+    cout << "Cuantas iteraciones de la serie de F quieres? ";
+    cin >> iterationsSelect;
+    cout << "\nSERIE DE FIBONACCI" << endl;
+
+    do{
+        iterations++;
+
+        if (iterations == 1){
+            cout << "Iteracion " << iterations << ": " << base1 << endl;
+        } else if (iterations == 2){
+            cout << "Iteracion " << iterations << ": " << base2 << endl;
+        } else {
+            sum = base1 + base2;
+
+            cout << "Iteracion " << iterations << ": " << base1 << " + " << base2 << " = " << sum << endl;
+
+            base1 = base2;
+            base2 = sum;
+        }
+    } while(iterations != iterationsSelect);
+    */
+   
     return 0;
 }
