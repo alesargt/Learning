@@ -34,8 +34,6 @@ En código se vería así:
 
 * *short* Son valores que se almacenan en 16bits, por lo cual es un 2^16 de espacios, pero igual que en los int estos se parten a la mitad para positivos y mitad negativos, o sea de -32,768 hasta +32,767.
 
-* *char* Es un byte, por lo que hay 2^8 valores, mitad positiva y mitad negativa desde los valores -128 a +127.
-
 * *float y double* Almacenan valores decimales, el float tiene menos valores que el double.
 
 ### Textos
@@ -53,7 +51,9 @@ Los booleanos al igual que en álgebra booleana son de verdadero o falso (ceros 
 ---
 ## Condicionales
 
-Las condicionales como su nombre lo indica, son cosas que deben cumplirse para que se pueda ejecutar, cuando se coloca un *if* quiere decir que **si se cumple se ejecuta el código** si no, se ejecuta otra cosa o simplmente no sucede nada, por ejemplo:
+Las condicionales como su nombre lo indica, son cosas que deben cumplirse para que se pueda ejecutar, cuando se coloca un *if* quiere decir que **si se cumple se ejecuta el código** si no, se ejecuta otra cosa o simplmente no sucede nada.
+
+### if
 
 ``` C++
 if (num > 0){
@@ -61,7 +61,11 @@ if (num > 0){
 }
 ```
 
-Esto se separa en varias partes. Primero se ve que si se cumple algo sucede lo siguiente. Parte por parte sería se define que habrá condición *if* luego se coloca la condición *(condición)* y luego el bloque de código que se va a ejecutar *{bloque de código a ejecutar}*. Ahora, qué sucede **si la condión no se cumple**, no es necesario que esté pero si se quiere tomar en cuenta se usa la palabra reservada *else* lo cual indica, **si lo anterior no se cumple entonces es esto**. Ejemplo:
+Esto se separa en varias partes. Primero se ve que si se cumple algo sucede lo siguiente. Parte por parte sería se define que habrá condición *if* luego se coloca la condición *(condición)* y luego el bloque de código que se va a ejecutar *{bloque de código a ejecutar}*. 
+
+Ahora, qué sucede **si la condión no se cumple**, no es necesario que esté pero si se quiere tomar en cuenta se usa la palabra reservada *else* lo cual indica, **si lo anterior no se cumple entonces es esto**.
+
+### else
 
 ``` C++
 if (num > 0){
@@ -70,7 +74,11 @@ if (num > 0){
     cout << "Su numero es negativo" << endl;
 }
 ```
-En esta parte el *else* **no lleva condición ya que al final solo es, lo que sucede si no se cumple la condición o condiciones iniciales**. Con esto su estructura es básica, si no se cumple lo anterior *else* que se ejecute esto *{bloque de código a ejecutar}*. También hay condiciones especiales, supongamos que queremos que en nuestro ejemplo si alguien escribe el cero, ese valor no es negativo, es neutro; sabiendo lo anterior, podemos hacer que corra una condición extra:
+En esta parte el *else* **no lleva condición ya que al final solo es, lo que sucede si no se cumple la condición o condiciones iniciales**. Con esto su estructura es básica, si no se cumple lo anterior *else* que se ejecute esto *{bloque de código a ejecutar}*. 
+
+También hay condiciones especiales, supongamos que queremos que en nuestro ejemplo si alguien escribe el cero, ese valor no es negativo, es neutro; sabiendo lo anterior, podemos hacer que corra una condición extra:
+
+### else if
 
 ``` C++
 if (num > 0){
@@ -94,10 +102,29 @@ En este nuevo código, por la mitad se ejecuta una nueva condicón que tiene la 
 * *&&* y (unión, dos o varias condiciones se deben cumplir al mismo tiempo para ejecutar código)
 * || o (con que una condición se cumpla, se ejecuta código sin importyar si hay más)
 
+Con esto, si en dado caso se compara como condición un menú, sea uno por ejemplo con cuatro opciones, 1. Sumar 2. Restar 3. Multiplicar 4. Dividir. Con las opciones anteriores no sería muy conveniente usar un if, else if, else if, else ya que se volvería algo tedioso y largo, para ello existe una función llamada *switch* la cual sirve para la compración de números o caracteres. 
+
+### switch
+
+``` C++
+    int opt = 1;
+
+    switch (opt){
+        case 1:
+            cout << "Suma " << endl;
+            break; // Sale de la función
+        default:
+            cout << "Error " << endl;
+            break;
+    }
+```
+
+Antes de continuar, el ejemplo cuanto menos está avanzado, pero observese la estructura. Primero, lo que va a usar para comparar es la variable opt, o sea que desde un inicio se debe avisar que variable se usa para comparar. La variable que se compare puede ser un char por lo tanto también está su uso disponible si es necesario. Luego de escribir case x, la x será el valor al cual entrará nuestra condición si se cumple, en el ejemplo vemos que opt = 1, por lo tanto entra en "case 1" ya que en ese la x tiene el valor de 1. Luego de que haya entrado, si queremos salir de la función y que no se ejecute el resto se usa la palabra reservada *brake*. Así se puede hacer con más número pero si en dado caso no es ninguno se usa la palabra reservada *default* que funciona como el *else* paar el *if*; eso quiere decir que si no es nada de lo anterior es eso.
+
 ---
 ## Ciclos
 
-Los ciclos, son tareas que se ejecutan mientras alguna o algunas condiciones se estén cumpliendo, una vez se cumplan ya no se ejecutan.
+Los ciclos, son tareas que se ejecutan mientras alguna o algunas condiciones se estén cumpliendo, una vez se cumplan ya no se ejecutan. Tienen palabras reservadas como *break* el cual corta el ciclo cuando se encunetra esa aplabra o *continue* que lo que haces es que avanza a la siguiente iteración si se ve encontrada.
 
 ### Ciclo for
 
@@ -173,7 +200,7 @@ string nombreCompleto;
 getline(cin, nombreCompleto)
 ```
 
-Ahora, hay un error muy común, el cual es que cuando se usa un *getline* luego de haber usado un *cin*. Este error se debe a que al usar un *cin* se puede quedar un salto en el buffer entonces por norma y buena práctica es adecuado usar un *cin.ignore();* esto lo que hace es limpiar el buffer y que ese error no suceda. Un ejemplo sería, cuando se pide el número de teléfono del usuario y luego se pide la dirección:
+Ahora, hay un error muy común, el cual es que cuando se usa un *getline* luego de haber usado un *cin*. Este error se debe a que al usar un *cin* se puede quedar un salto en el buffer entonces por norma y buena práctica es adecuado usar un *cin.ignore();* esto lo que hace es limpiar el buffer y que ese error no suceda. También es habitual colocar *cin.ignore(1000, '\n')* el cual no solo toma en cuenta un caracter, si no que desde mil carcateres o un salto de linea. Un ejemplo sería, cuando se pide el número de teléfono del usuario y luego se pide la dirección:
 
 ``` C++
 int telefono;
@@ -198,4 +225,38 @@ cin.ignore();
 
 cout << "Ingrese su direccion: ";
 getline (cin, direccion);
+```
+---
+## Funciones
+
+Las funciones en C++ sirven para recortar código, o sea, si yo siempre quiero mostrar un mensaje de bienvenida, pero lo debo mostrar en varias cosas, no tiene sentido estar en cada sessción escribiendo el saludo, mejor una función que recorte eso. 
+
+### Declarar función
+
+La función al inicio depende de algo, si quiero que simplemente escriba algo o que me devuelva algo. Si es esribir o modificar algo que no debe regersar nada, se usa *void*. Si quiero que me devuelva algo, debo escribirlo al inicialr, supongase que es un entero por lo tanto escribo *int* al inicio. Luego va el nombre de la función. Luego va *(datos de entrada)* los datos de entrada se les debe decir que tipo son y el nombre, si no lleva dato o datos de entrada se deja vacío; si recibe varios datos se pueden escribir solo siendo separado por las comas ",". Luego se abren llaves y se escribe el código a ejecutar. Si debe retornar algo se usa la palabra reservada *return* y al lado al variable que retorna, dicha variable debe ser del mismo tipo que la de la función, no usar por ejemplo *int* y retornar una cadena.
+
+``` C++
+    // Solo imprime un saludo
+    void saludar(){
+        cout << "Hola!\n";
+    }
+
+    // Recibe valor, pero no retorna valor, solo imprime
+    void miValor(int x){
+        cout << "Su valor es: " << x << "\n";
+    }
+
+    // Retorna valor
+    int sumandoDiez (int x){
+        return x + 10;
+    }
+```
+
+Las funciones también afectan a valores definidos, se les conoce como "Parámetros por referencia", esto lo que hace es que a los valores que le mandemos los pueda cambiar. Esto a que se debe, a que si existe un *return* no podemos regresar dos valores, pero supóngase que se le quiere dar a dos valores distintos algún cambio, pues se deben cambiar por referencia usando el símbolo *&*.
+
+``` C++
+    void cambiarValores (int &x, int &y){
+        x = x + 20;
+        y = y + 5;
+    }
 ```

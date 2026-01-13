@@ -49,5 +49,17 @@ int main(){
     cout << "Ingrese su direccion: ";
     getline (cin, direccion);*/
 
+    int num = 0;
+    int opt = 1;
+
+    while (num !=5){
+        switch (opt){
+            case 0:
+            break;
+        }
+        cout << "Ingrese valor: ";
+        cin >> opt;
+    }
+
     return 0; // Indica que todo terminó sin errores
 }
