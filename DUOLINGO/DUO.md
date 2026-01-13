@@ -40,3 +40,12 @@ Este es mi inicio en dulingo, inicio en experiencia cero, ya que desde cero quie
 ![PerfilAvancesInicialesSiete](/DUOLINGO/img/semana1_week1/16.png)
 ![AvancesIntermediosSiete](/DUOLINGO/img/semana1_week1/17.png)
 ![PerfilAvancesIntermediosSiete](/DUOLINGO/img/semana1_week1/18.png)
+
+## LIGA SEMANA 1 | LEAGUE WEEK 1
+
+![Liga](/DUOLINGO/img/semana1_week1/19.png)
+
+## DIA 8 | DAY 8
+
+![AvancesInicialesOcho](/DUOLINGO/img/semana2_week2/1.png)
+![PerfilAvancesInicialesOcho](/DUOLINGO/img/semana2_week2/2.png)
