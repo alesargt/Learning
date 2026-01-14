@@ -260,3 +260,5 @@ Las funciones también afectan a valores definidos, se les conoce como "Parámet
         y = y + 5;
     }
 ```
+
+Si se quiere cortar una función como lo hacen los *break* para los ciclos, se puede usar un *return;* en alguna parte de la función, ya que auqnue sea un *void* de función si recibe un *return;* simplemente se deja de ejecutar.
