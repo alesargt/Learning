@@ -12,7 +12,7 @@
 using namespace std;
 
 // Tardé 2 minutos
-void parImpar (int num){
+void parImpar (const int num){
     cout << "*** PAR E IMPAR ***\n";
 
     if (num % 2 == 0){
@@ -58,7 +58,7 @@ void inversionNumeros (int num){
 }
 
 // Tardé 45 minutos
-void numPrimo (int num){
+void numPrimo (const int num){
     cout << "*** NUMERO PRIMO ***\n";
 
     short divisor = 2;
@@ -84,7 +84,7 @@ void numPrimo (int num){
 }
 
 // Tardé 15 minutos
-void serieFibonacci (int valor){
+void serieFibonacci (const int valor){
     cout << "*** SERIE DE FIBONACCI ***\n";
 
     int aux;
@@ -114,7 +114,7 @@ void serieFibonacci (int valor){
 }
 
 // Tardé 25 minutos
-void adivinaNumero(int valor){
+void adivinaNumero(const int valor){
     cout << "*** ADIVINA EL NUMERO ***\n";
 
     short numIngresado = 0;
