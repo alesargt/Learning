@@ -66,6 +66,9 @@ void numPrimo (int num){
     if (num < 0){
         cout << "Error " << num << " es negativo, use numeros positivos\n\n";
         return;
+    } else if (num <= 1){
+        cout << num << " no es primo\n\n";
+        return;
     }
 
     while (divisor != num){
@@ -140,7 +143,7 @@ void adivinaNumero(int valor){
 }
 
 int main (){
-    int valor = 8;
+    int valor = 2;
     //parImpar(valor);
     //inversionNumeros(valor);
     //numPrimo(valor);
