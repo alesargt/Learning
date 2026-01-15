@@ -54,3 +54,9 @@ Este es mi inicio en dulingo, inicio en experiencia cero, ya que desde cero quie
 ![PerfilAvancesInicialesNueve](/DUOLINGO/img/semana2_week2/4.png)
 ![AvancesIntermediosNueve](/DUOLINGO/img/semana2_week2/5.png)
 ![PerfilAvancesIntermediosNueve](/DUOLINGO/img/semana2_week2/6.png)
+
+## DIA 10 | DAY 10
+![AvancesInicialesDiez](/DUOLINGO/img/semana2_week2/7.png)
+![PerfilAvancesInicialesDiez](/DUOLINGO/img/semana2_week2/8.png)
+![AvancesIntermediosDiez](/DUOLINGO/img/semana2_week2/9.png)
+![PerfilAvancesIntermediosDiez](/DUOLINGO/img/semana2_week2/10.png)
