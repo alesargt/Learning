@@ -8,12 +8,18 @@
 */
 
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 
 using namespace std;
 
-// Tardé 2 minutos
-void parImpar (const int num){
-    cout << "*** PAR E IMPAR ***\n";
+// Tardé 2 minutos -- 2 minutos más en arreglos nuevos
+void parImpar (){
+    int num;
+
+    cout << "*** PAR E IMPAR ***\n"
+        << "Que numero quiere probar: ";
+    cin >> num;
 
     if (num % 2 == 0){
         cout << num << " es par\n\n";
@@ -23,7 +29,7 @@ void parImpar (const int num){
 }
 
 /*
-    Tardé 90 minutos 
+    Tardé 90 minutos -- 2 minutos más en arreglos nuevos
     Los primero 50 minutos hice que funcionara pero no tomaba en cuenta números negativos. También tenía muchas variables en uso, por ejemplo 
     dos float, cuatro enteros, entonces era muy largo, al igual que tenía muchos cout ya que hice pruebas para ver que el ciclo usara bien mis
     divisiones ya que antes sacaba el numEntero y el numDecimal y con un numAux conseguía la resta para obtener el decimal, y ese valor lo
@@ -32,20 +38,21 @@ void parImpar (const int num){
     entonces quise estar optimizando todo, y llegué a la versión final donde ya fundionaba todo sin muchas variables. Para ello tomé 40 minutos
     extra
 */
-void inversionNumeros (int num){
-    cout << "*** INVERSION DE NUMEROS ***\n";
-
+void inversionNumeros (){
+    int num;
     int numInvertido = 0;
 
+    cout << "*** INVERSION DE NUMEROS ***\n"
+        << "Que numero quiere probar: ";
+    cin >> num;    
+
+    cout << "\nSu numero sin invertir es: " << num << "\n";
+
     if (num < 0){
-        cout << "\nError: " << num << " es negativo, use un valor positivo\n\n";
+        cout << "Error: " << num << " es negativo, use un valor positivo\n\n";
         return;
-    }
-
-    cout << "Su numero sin invertir es: " << num;
-
-    if (num < 10){
-        cout << "\nSu numero invertido es: " << num << "\n\n";
+    } else if (num < 10){
+        cout << "Su numero invertido es: " << num << "\n\n";
         return;
     }
 
@@ -54,14 +61,17 @@ void inversionNumeros (int num){
         num /= 10;
     }
 
-    cout << "\nSu numero invertido es: " << numInvertido << "\n\n";
+    cout << "Su numero invertido es: " << numInvertido << "\n\n";
 }
 
-// Tardé 45 minutos
-void numPrimo (const int num){
-    cout << "*** NUMERO PRIMO ***\n";
-
+// Tardé 45 minutos -- 2 minutos más en arreglos nuevos
+void numPrimo (){
+    int num;
     short divisor = 2;
+
+    cout << "*** NUMERO PRIMO ***\n"
+        << "Ingrese su numero: ";
+    cin >> num;    
 
     if (num < 0){
         cout << "Error " << num << " es negativo, use numeros positivos\n\n";
@@ -80,17 +90,20 @@ void numPrimo (const int num){
         divisor++;
     }
 
-    cout << num << " es primo";
+    cout << num << " es primo" << "\n\n";
 }
 
-// Tardé 15 minutos
-void serieFibonacci (const int valor){
-    cout << "*** SERIE DE FIBONACCI ***\n";
-
+// Tardé 15 minutos -- 2 minutos más en arreglos nuevos
+void serieFibonacci (){
     int aux;
     int base1 = 0;
     int base2 = 1;
+    short valor;
     short iteracion = 1;
+
+    cout << "*** SERIE DE FIBONACCI ***\n"
+        << "Ingrese la cantidad de iteraciones que desea ver de la seri de F: ";
+    cin >> valor;
 
     while (iteracion <= valor){
         if (iteracion == 1){
@@ -113,40 +126,86 @@ void serieFibonacci (const int valor){
     cout << "\n";
 }
 
-// Tardé 25 minutos
-void adivinaNumero(const int valor){
+// Tardé 25 minutos -- 10 minutos más en arreglos nuevos
+void adivinaNumero(){
     cout << "*** ADIVINA EL NUMERO ***\n";
+
+    srand(time(NULL));
+    short num = (rand() % 100) + 1; 
 
     short numIngresado = 0;
     short intentos = 1;
 
     cout << "El numero puede ser entre 1-100\n";
 
-    while (intentos < 6){
-    cout << "Este es tu intento: " << intentos << " de 5\n"
+    while (intentos < 7){
+    cout << "Este es tu intento: " << intentos << " de 6\n"
         << "Ingrese un numero: ";
 
         cin >> numIngresado;
 
-        if (numIngresado > valor){
+        if (numIngresado > num){
             cout << "\n" << numIngresado << " es mayor al numero que buscas\n\n";
             intentos++;
-        } else if(numIngresado < valor){
+        } else if(numIngresado < num){
             cout << "\n" <<numIngresado << " es menor al numero que buscas\n\n";
             intentos++;
         } else {
-            cout << "\nLO ADIVINASTE, FELICIDADES!!!\n\n";
+            cout << "\nLO ADIVINASTE, FELICIDADES!!! el numero era el: " << num << "\n\n";
             return;
         }
     }
-    cout << "PERDISTE :c\n\n"; 
+    cout << "PERDISTE :c el numero era: " << num << "\n\n"; 
+}
+
+// Tardé 2 minutos
+void menu(){
+    cout << "*** MENU ***\n"
+    << "1. Par/impar\n"
+    << "2. Invertir numeros\n"
+    << "3. Numero primo\n"
+    << "4. Serie de Fibonacci\n"
+    << "5. Adivina el numero\n"
+    << "6. Salir\n\n"
+    << "Elija lo que desea hacer: ";
+}
+
+// Tardé 40 minutos
+void eleccionMenu (const int x){
+    switch (x){
+        case 1: 
+            parImpar();
+            break;
+        case 2:
+            inversionNumeros();
+            break;
+        case 3:
+            numPrimo();
+            break;
+        case 4:
+            serieFibonacci();
+            break;
+        case 5:
+            adivinaNumero();
+            break;
+        case 6:
+            cout << "Saliendo...\n";
+            break;                     
+    }
 }
 
 int main (){
-    int valor = 2;
-    //parImpar(valor);
-    //inversionNumeros(valor);
-    //numPrimo(valor);
-    //serieFibonacci(valor);
-    //adivinaNumero(valor);
+    int opt = 0;
+
+    while (opt != 6){
+        menu();
+
+        cin >> opt;
+
+        cout << "\n";
+
+        eleccionMenu(opt);
+    }
+
+    return 0;
 }

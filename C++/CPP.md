@@ -262,3 +262,42 @@ Las funciones también afectan a valores definidos, se les conoce como "Parámet
 ```
 
 Si se quiere cortar una función como lo hacen los *break* para los ciclos, se puede usar un *return;* en alguna parte de la función, ya que auqnue sea un *void* de función si recibe un *return;* simplemente se deja de ejecutar.
+
+A su vez, una función puede hacer uso de otra, por ejemplo, si yo quiero que una función sirva para saber si un numero es par o impar, y otra función me da la tabla de multiplicaciones, yo la puedo unificar en una función que haga uso de ambas, por ejemplo:
+
+```C++
+    #include <iostream>
+
+    using namespace std; // Esta linea no se usa en proyectos reales pero sirve para ejecutar este codigo de ejemplo
+
+    void parImpar (int x){
+        cout << "*** PAR IMPAR ***\n";
+        if (x % 2 == 0){
+            cout << x << " es par\n\n";
+        } else {
+            cout << x << " es impar\n\n";
+        }
+    }
+
+    void tablaMultiplicaciones (int y){
+        cout << "*** TABLA DE MULTIPLICACIONES ***\n";
+
+        for (int i = 1; i <= 10; i++){
+            cout << y << " * " << i << " = " << y * i << "\n";
+        }
+
+        cout << "\n";
+    }
+
+    void pruebaNumero (int num){
+        parImpar(num);
+        tablaMultiplicaciones(num);
+    }
+
+    int main (){
+        int miNumero = 5;
+        pruebaNumero(miNumero);
+    }
+```
+
+## Librerias
