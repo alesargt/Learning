@@ -67,7 +67,7 @@ void inversionNumeros (){
 // Tardé 45 minutos -- 2 minutos más en arreglos nuevos
 void numPrimo (){
     int num;
-    short divisor = 2;
+    int divisor = 2;
 
     cout << "*** NUMERO PRIMO ***\n"
         << "Ingrese su numero: ";
@@ -95,11 +95,11 @@ void numPrimo (){
 
 // Tardé 15 minutos -- 2 minutos más en arreglos nuevos
 void serieFibonacci (){
+    int valor;
     int aux;
     int base1 = 0;
     int base2 = 1;
-    short valor;
-    short iteracion = 1;
+    int iteracion = 1;
 
     cout << "*** SERIE DE FIBONACCI ***\n"
         << "Ingrese la cantidad de iteraciones que desea ver de la seri de F: ";
@@ -128,15 +128,13 @@ void serieFibonacci (){
 
 // Tardé 25 minutos -- 10 minutos más en arreglos nuevos
 void adivinaNumero(){
-    cout << "*** ADIVINA EL NUMERO ***\n";
-
     srand(time(NULL));
-    short num = (rand() % 100) + 1; 
+    int num = (rand() % 100) + 1; 
+    int numIngresado = 0;
+    int intentos = 1;
 
-    short numIngresado = 0;
-    short intentos = 1;
-
-    cout << "El numero puede ser entre 1-100\n";
+    cout << "*** ADIVINA EL NUMERO ***\n"
+        << "El numero puede ser entre 1-100\n";
 
     while (intentos < 7){
     cout << "Este es tu intento: " << intentos << " de 6\n"
