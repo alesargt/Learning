@@ -60,3 +60,30 @@ Este es mi inicio en dulingo, inicio en experiencia cero, ya que desde cero quie
 ![PerfilAvancesInicialesDiez](/DUOLINGO/img/semana2_week2/8.png)
 ![AvancesIntermediosDiez](/DUOLINGO/img/semana2_week2/9.png)
 ![PerfilAvancesIntermediosDiez](/DUOLINGO/img/semana2_week2/10.png)
+
+## DIA 11 | DAY 11
+![AvancesInicialesOnce](/DUOLINGO/img/semana2_week2/11.png)
+![PerfilAvancesInicialesOnce](/DUOLINGO/img/semana2_week2/12.png)
+![ScoreDiez](/DUOLINGO/img/semana2_week2/13.png)
+
+## DIA 12 | DAY 12
+![AvancesInicialesDoce](/DUOLINGO/img/semana2_week2/14.png)
+![PerfilAvancesInicialesDoce](/DUOLINGO/img/semana2_week2/15.png)
+
+## DIA 13 | DAY 13
+![AvancesInicialesTrece](/DUOLINGO/img/semana2_week2/16.png)
+![PerfilAvancesInicialesTrece](/DUOLINGO/img/semana2_week2/17.png)
+
+## DIA 14 | DAY 14
+![AvancesInicialesCatorce](/DUOLINGO/img/semana2_week2/18.png)
+![PerfilAvancesInicialesCatorce](/DUOLINGO/img/semana2_week2/19.png)
+
+## LIGA SEMANA 2 | LEAGUE WEEK 2
+
+![Liga](/DUOLINGO/img/semana2_week2/20.png)
+
+## DIA 15 | DAY 15
+![AvancesInicialesQuince](/DUOLINGO/img/semana3_week3/1.png)
+![PerfilAvancesInicialesQuince](/DUOLINGO/img/semana3_week3/2.png)
+![AvancesIntermediosQuince](/DUOLINGO/img/semana3_week3/3.png)
+![PerfilAvancesIntermediosQuince](/DUOLINGO/img/semana3_week3/4.png)
